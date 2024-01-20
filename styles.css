@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+
+    font-size: 20px;
+
+    --background-dark: #222;
+    --font-color-dark: white;
+    --line-color-dark: white;
+
+    --background-light: white;
+    --font-color-light: #222;
+    --line-color-light: #222;
+ 
+    --contrast-color-1: /*#1ef*/ #0BD3E6;
+    --contrast-color-2: /*#f1e*/ #E60B89;
+    --contrast-color-3: /*#ef1*/ #E6C90B;
+
+    --size-main-title: 6rem;
+    --size-sub-title: 3rem;
+    --size-small-title: 2rem;
+    --size-small-text: 0.75rem;
+
+    --main-font: "Poppins", sans-serif;
+    --text-max: 90ch;
+
+    --distance-small: 0.5rem;
+    --distance-medium: 1rem;
+    --distance-large: 2rem;
+
+    --width-narrow: 50%;
+    --widht-normal: 80%;
+    --width-wide: 90%;
+
+    --line-thin: 0.05rem;
+    --line-medium: 0.15rem;
+    --line-thick: 0.3rem;
+
+    --round-less: 0.5rem;
+    --round-medium: 1rem;
+    --round-more: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--background-light);
+}
+
+h1 {
+    font-size: var(--size-main-title);
+}
+
+h2 {
+    font-size: var(--size-sub-title);
+}
+
+h3 {
+    font-size: var(--size-small-title);
+    font-weight: 400;
+    font-style: italic;
+}
+
+hr {
+    border-image: var(--line-color);
+}
+
+.text-gradient {
+    background: linear-gradient(
+        45deg,
+        var(--contrast-color-2),
+        var(--contrast-color-3)
+        );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.remove-text-format {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*--- specific ---*/
+
+.hr-1 {
+    border-image: linear-gradient(
+        90deg, 
+        transparent,
+        var(--contrast-color-1),
+        transparent
+        ) 1;
+    border-width: var(--line-thick);
+    border-style: solid;
+    margin-bottom: calc(
+        var(--line-thick)*1.5
+        );
+}
+
+.hr-2 {
+    border-image: linear-gradient(
+        90deg, 
+        transparent, 
+        var(--contrast-color-2), 
+        transparent
+        ) 25;
+    border-width: var(--line-medium);
+    border-style: solid;
+    margin-bottom: calc(
+        var(--line-thick)*1.5
+        );
+}
+
+.hr-3 {
+    border-image: linear-gradient(
+        90deg, transparent, 
+        var(--contrast-color-3), 
+        transparent
+        ) 25;
+    border-width: var(--line-thick);
+    border-style: solid;
+    margin-bottom: calc(
+        var(--line-thick)*1.5
+        );
+}
+
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    height: auto;
+    width: 100%;
+    padding: var(--distance-small);
+    padding: 0 10%;
+    margin-bottom: var(--distance-medium);
+    background-color: var(--background-light);
+}
+
+.container-grid-col {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 100%;
+}
+
+.container-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+main {
+    width: var(--widht-normal);
+    margin: 0 auto;
+}
+
+.section {
+    padding: var(--distance-medium) 0;
+    margin-bottom: var(--distance-large);
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--distance-small);
+    padding: var(--distance-medium);
+}
+
+.button {
+    border-radius: var(--round-less);
+    padding: var(--distance-small);
+}
+    
+.button:hover {
+    color: var(--font-color-dark);
+    background-color: var(--background-dark);
+}
+
+#title {
+    margin-bottom: var(--distance-large);
+}
+
+#profile_pic {
+    opacity: 90%;
+    display: block;
+    margin-bottom: 0.25rem;
+    max-width: 800px;
+    min-width: 200px;
+    background: linear-gradient(
+            135deg, 
+            transparent 0% 20%, 
+            var(--contrast-color-1) 20% 60%,
+            transparent 60% 100%), 
+        linear-gradient(
+            45deg, 
+            transparent 0% 10%, 
+            var(--contrast-color-2) 10% 45%, 
+            transparent 45% 100%), 
+        linear-gradient(
+            270deg, 
+            transparent 0% 17.5%, 
+             var(--contrast-color-3) 17.5% 40%, 
+            transparent 40% 100%)
+}
+
+.section-title {
+    margin: var(--distance-large) 0;
+}
+
+.text {
+    max-width: var(--text-max);
+    margin-bottom: var(--distance-medium);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: start;
+    gap: var(--distance-medium);
+    padding-bottom: var(--distance-small);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--distance-small);
+    border-top-left-radius: var(--round-less);
+    color: var(--font-color-light);
+}
+
+.skill-card {
+    width: 10rem;
+    min-width: fit-content;
+    box-shadow: 2px 2px 0 #222;
+
+}
+
+.skill-icon {
+    height: 5rem;
+}
+
+.card-title {
+    font-style: normal;
+}
+
+.project-tile {
+    width: 55ch;
+    box-shadow: 2px 2px 0 #222;
+    padding-bottom: var(--distance-medium);
+}
+
+.frame-c1 {
+    background:
+    linear-gradient(
+        135deg,
+        var(--contrast-color-1) 0% 30%, 
+        transparent 30% 100%);
+}
+
+.frame-c2 {
+    background:
+    linear-gradient(
+        135deg,
+        var(--contrast-color-2) 0% 30%,
+        transparent 30% 100%);
+}
+
+.frame-c3 {
+    background:
+    linear-gradient(
+        135deg,
+        var(--contrast-color-3) 0% 30%,
+        transparent 30% 100%);
+}
+
+.project-pic {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+    border-radius: var(--round-less);
+    margin-bottom: var(--distance-medium);
+}
+
+.project-icons > i {
+    font-size: 2rem;
+}
+
+.project-divider {
+    width: 80%;
+    margin: var(--distance-small) 0;
+}
+
+.project-title {
+    margin-bottom: var(--distance-medium);
+    font-style: normal;
+}
+
+.project-text {
+    margin-bottom: var(--distance-medium);
+}
+
+.project-link {
+    margin: var(--distance-small) 0;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--background-dark);
+    color: var(--font-color-dark);
+    padding: var(--distance-medium) 10%;
+    margin-bottom: var(--distance-medium);
+}
+
+.footer-container {
+    width: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.profile-icon {
+    font-size: 3rem;
+}
+
+form {
+    margin-top: var(--distance-medium);
+}
+
+.form-element {
+    display: block;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1rem 0;
+    margin: var(--distance-small) 0;
+}
+
+#submit {
+    margin-top: var(--distance-medium);
+}
+
+input, textarea {
+
+}
+
+@media only screen and (max-width: 799px) {
+
+    :root {
+
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: calc(var(--size-main-title) - 1rem);
+        text-align: center;
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    #profile_pic {
+        width: 100%;
+        margin-left: var(--distance-small);
+        min-width: 200px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 999px) {
+
+    :root {
+        font-size: 14px;
+    }
+
+    #profile_pic {
+        width: 50%;
+        min-width: 480px;
+        max-width: 600px;
+
+    }
+
+    .skill-container {
+        justify-content: start;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    :root {
+        font-size: 16px;
+    }
+
+    #profile_pic {
+        width: 50%;
+        min-width: 480px;
+        max-width: 600px;
+
+     }
+
+     .skill-container {
+        justify-content: start;
+     }
+}
