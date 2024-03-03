@@ -2,4 +2,4 @@
 
 ## Overview
 
-Hi, I'm Alex. This website is my developer-portfolio.
+Hi, I'm Alex. This website is my developer-portfolio. It was created with Bootstrap.
